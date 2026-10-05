@@ -1,0 +1,24 @@
+Run backend and frontend in two terminals. See README.md for exact commands.
+
+New polished modules:
+- Dashboard: frontend/src/components/Dashboard.jsx
+- Contribution Tracker: frontend/src/components/ContributionTracker.jsx
+- AI Issue Explainer: frontend/src/components/AiSummaryModal.jsx
+- AI backend service: backend/src/services/aiService.js
+
+Mock-first workflow:
+1. backend/.env -> USE_MOCK_DATA=true
+2. Start backend
+3. Start frontend
+4. Search mock issues
+5. Try Dashboard, + Track, status changes, and Explain with AI
+
+Live GitHub workflow:
+1. backend/.env -> USE_MOCK_DATA=false
+2. Set GITHUB_TOKEN=your token
+3. Restart backend
+4. Search live GitHub issues
+
+Optional live AI:
+- Set OPENAI_API_KEY and OPENAI_MODEL.
+- If no AI key is supplied, the AI Explainer falls back safely.
